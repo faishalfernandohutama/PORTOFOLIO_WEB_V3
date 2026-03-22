@@ -1,14 +1,40 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, onUnmounted } from 'vue'
+import { RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Lenis from '@studio-freight/lenis'
+
+let lenis: any
+
+onMounted(() => {
+  lenis = new Lenis({
+    duration: 1.2,
+    smoothWheel: true,
+    smoothTouch: false,
+  })
+
+  const raf = (time: number) => {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+})
+
+onUnmounted(() => {
+  lenis?.destroy()
+})
 </script>
 
 <template>
-  <div class="bg-black">
-    <header>
+  <div class="bg-black text-white">
+    <!-- CONTENT -->
+    <main>
       <RouterView />
-      <Footer />
-    </header>
+    </main>
+
+    <!-- FOOTER -->
+    <Footer />
   </div>
 </template>

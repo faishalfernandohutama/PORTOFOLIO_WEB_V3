@@ -6,3 +6,11 @@
   --font-changaOne: 'Changa One', sans-serif;
   --font-dmSans: 'DM Sans', sans-serif;
 }
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}

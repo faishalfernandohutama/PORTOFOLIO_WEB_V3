@@ -1,69 +1,82 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <!-- NAVBAR -->
-  <header
-    class="absolute top-0 left-0 w-full h-16 flex items-center justify-between px-8 py-14 md:px-20 z-50"
+  <div
+    class="fixed bottom-0 left-0 right-0 h-32 z-40 pointer-events-none transition-all duration-500 ease-in-out"
+    :class="isScrolled ? 'opacity-100' : 'opacity-0'"
   >
-    <!-- Logo -->
-    <button class="h-16 flex items-center">
-      <img src="./icons/logoPersonal.png" alt="Logo" class="h-full object-contain" />
-    </button>
+    <div
+      class="absolute inset-0 backdrop-blur-[20px] [mask-image:linear-gradient(to_top,black_20%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_top,black_20%,transparent_100%)]"
+    ></div>
+  </div>
 
-    <!-- Hamburger -->
-    <button
-      @click="isOpen = !isOpen"
-      class="md:hidden relative w-10 h-10 flex items-center justify-center"
+  <div
+    class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out"
+    :class="isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+  >
+    <div
+      class="flex items-center gap-6 px-7 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/20 shadow-lg text-white"
     >
-      <!-- garis atas -->
-      <span
-        class="absolute w-6 h-0.5 bg-white transition-all duration-300"
-        :class="isOpen ? 'rotate-45' : '-translate-y-2'"
-      ></span>
+      <ul class="hidden md:flex gap-6 items-center">
+        <li class="hover:text-gray-300 transition-colors cursor-pointer">Home</li>
+        <li class="hover:text-gray-300 transition-colors cursor-pointer">Skills</li>
+        <li class="hover:text-gray-300 transition-colors cursor-pointer">About</li>
+        <li class="hover:text-gray-300 transition-colors cursor-pointer">Projects</li>
+        <li class="hover:text-gray-300 transition-colors cursor-pointer">Contacts</li>
+      </ul>
 
-      <!-- garis tengah -->
-      <span
-        class="absolute w-6 h-0.5 bg-white transition-all duration-300"
-        :class="isOpen ? 'opacity-0' : ''"
-      ></span>
+      <button
+        @click="isOpen = !isOpen"
+        class="md:hidden relative w-8 h-8 flex items-center justify-center focus:outline-none"
+      >
+        <span
+          class="absolute w-5 h-0.5 bg-white transition-all duration-300"
+          :class="isOpen ? 'rotate-45' : '-translate-y-1.5'"
+        ></span>
+        <span
+          class="absolute w-5 h-0.5 bg-white transition-all duration-300"
+          :class="isOpen ? 'opacity-0' : ''"
+        ></span>
+        <span
+          class="absolute w-5 h-0.5 bg-white transition-all duration-300"
+          :class="isOpen ? '-rotate-45' : 'translate-y-1.5'"
+        ></span>
+      </button>
+    </div>
+  </div>
 
-      <!-- garis bawah -->
-      <span
-        class="absolute w-6 h-0.5 bg-white transition-all duration-300"
-        :class="isOpen ? '-rotate-45' : 'translate-y-2'"
-      ></span>
-    </button>
-
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-8 text-white">
-      <li class="cursor-pointer">About</li>
-      <li class="cursor-pointer">Contacts</li>
-      <li class="cursor-pointer">Projects</li>
-    </ul>
-  </header>
-
-  <!-- SPACER (biar konten tidak ketutup navbar fixed) -->
-  <div class="h-16"></div>
-
-  <!-- MOBILE FULLSCREEN MENU -->
   <transition name="fade">
     <div
       v-if="isOpen"
-      class="fixed inset-0 bg-darkBlue z-40 flex flex-col justify-center text-white items-center gap-8 text-xl"
+      class="fixed inset-0 bg-black/80 backdrop-blur-xl z-50 flex flex-col justify-center items-center text-white gap-8 text-xl"
     >
-      <a href="#about" @click="isOpen = false">About</a>
-      <a href="#contact" @click="isOpen = false">Contacts</a>
-      <a href="#projects" @click="isOpen = false">Projects</a>
+      <a href="#home" @click="isOpen = false" class="hover:text-gray-300">Home</a>
+      <a href="#skills" @click="isOpen = false" class="hover:text-gray-300">Skills</a>
+      <a href="#about" @click="isOpen = false" class="hover:text-gray-300">About</a>
+      <a href="#projects" @click="isOpen = false" class="hover:text-gray-300">Projects</a>
+      <a href="#contact" @click="isOpen = false" class="hover:text-gray-300">Contacts</a>
     </div>
   </transition>
 </template>
 
 <style>
-/* Smooth fade */
 .fade-enter-from {
   opacity: 0;
 }
@@ -73,7 +86,6 @@ const isOpen = ref(false)
 .fade-enter-active {
   transition: opacity 0.3s ease;
 }
-
 .fade-leave-from {
   opacity: 1;
 }
@@ -82,10 +94,5 @@ const isOpen = ref(false)
 }
 .fade-leave-active {
   transition: opacity 0.2s ease;
-}
-
-/* Hindari scroll aneh */
-body {
-  overflow-x: hidden;
 }
 </style>
