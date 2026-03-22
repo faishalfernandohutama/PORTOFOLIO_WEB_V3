@@ -16,7 +16,7 @@ import { Icon } from '@iconify/vue'
         <div class="flex flex-col justify-between h-full">
           <div class="space-y-4">
             <h2 class="uppercase text-2xl font-semibold">Clipper Crafters</h2>
-            <p class="text-gray-400">
+            <p class="text-gray-400 font-dmSans">
               Web-based system for UMKM to manage bookings and customer interaction.
             </p>
           </div>
@@ -45,7 +45,7 @@ import { Icon } from '@iconify/vue'
         <div class="flex flex-col justify-between h-full">
           <div class="space-y-4">
             <h2 class="uppercase text-2xl font-semibold">ERP Project</h2>
-            <p class="text-gray-400">
+            <p class="text-gray-400 font-dmSans">
               Machine Learning Web Implementation: Plantation Production Predictor A React-based web
               application that functions as a plantation production prediction dashboard. This
               project covers an end-to-end workflow, from data preprocessing using the CatBoost
@@ -72,7 +72,7 @@ import { Icon } from '@iconify/vue'
         <div class="flex flex-col justify-between h-full">
           <div class="space-y-4">
             <h2 class="uppercase text-2xl font-semibold">CatBoost Prediction</h2>
-            <p class="text-gray-400">
+            <p class="text-gray-400 font-dmSans">
               Full-Stack Enterprise Resource Planning (ERP) System: A web-based ERP system designed
               to manage, automate, and integrate various business operational processes. This
               project is built with a decoupled architecture: The frontend repository focuses on a
@@ -105,7 +105,7 @@ import { Icon } from '@iconify/vue'
         <div class="flex flex-col justify-between h-full">
           <div class="space-y-4">
             <h2 class="uppercase text-2xl font-semibold">InnHub</h2>
-            <p class="text-gray-400">
+            <p class="text-gray-400 font-dmSans">
               InnHub: Integrated Hospitality & Property Management System InnHub is a modern lodging
               management platform designed to simplify the reservation process and property
               operations. Built on a full-stack architecture that separates the client and server
@@ -132,7 +132,7 @@ import { Icon } from '@iconify/vue'
         <div class="flex flex-col justify-between h-full">
           <div class="space-y-4">
             <h2 class="uppercase text-2xl font-semibold">CukurRans</h2>
-            <p class="text-gray-400">
+            <p class="text-gray-400 font-dmSans">
               Cukurans: Digital Barbershop Booking & Management System Cukurans is a digital
               solution designed to modernize conventional barbershop services. This platform allows
               users to book appointments online while also helping barbershop owners manage queues
@@ -156,6 +156,30 @@ import { Icon } from '@iconify/vue'
           <img src="./icons/Cukur.png" />
         </div>
       </div>
+    </div>
+    <!-- CURVED ARROW -->
+    <div class="mt-8 flex justify-center md:justify-end left-0">
+      <svg class="w-20 h-20 text-purple-400 animate-fadeIn" viewBox="0 0 100 100" fill="none">
+        <!-- path melengkung -->
+        <path
+          d="M20 20 C20 60, 80 40, 80 80"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          class="animate-draw"
+        />
+
+        <!-- arrow head -->
+        <polyline
+          points="70,75 80,85 90,75"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="animate-bounceArrow"
+        />
+      </svg>
     </div>
   </section>
 </template>

@@ -4,6 +4,8 @@ import Contacts from '@/components/Contacts.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import ProjectsPre from '@/components/ProjectsPre.vue'
+import Service from '@/components/Service.vue'
+import Skills from '@/components/Skills.vue'
 </script>
 
 <template>
@@ -20,12 +22,20 @@ import ProjectsPre from '@/components/ProjectsPre.vue'
     </section>
 
     <!-- PROJECT -->
-    <section id="projects" class="min-h-screen">
+    <section id="projects" class="">
       <ProjectsPre />
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="min-h-screen">
+    <section id="skills" class="">
+      <Skills />
+    </section>
+
+    <section id="skills" class="">
+      <Service />
+    </section>
+
+    <section id="contact" class="">
       <Contacts />
     </section>
   </div>
