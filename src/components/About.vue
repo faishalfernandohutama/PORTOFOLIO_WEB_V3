@@ -79,7 +79,7 @@
     </div>
 
     <!-- CURVED ARROW -->
-    <div class="mt-8 flex justify-center md:justify-start">
+    <div class="flex justify-center md:justify-start">
       <svg class="w-20 h-20 text-purple-400 animate-fadeIn" viewBox="0 0 100 100" fill="none">
         <!-- path melengkung -->
         <path

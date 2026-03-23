@@ -6,6 +6,7 @@ import Hero from '@/components/Hero.vue'
 import ProjectsPre from '@/components/ProjectsPre.vue'
 import Service from '@/components/Service.vue'
 import Skills from '@/components/Skills.vue'
+import Text from '@/components/Text.vue'
 </script>
 
 <template>
@@ -19,6 +20,10 @@ import Skills from '@/components/Skills.vue'
     <!-- ABOUT -->
     <section id="about" class="">
       <About />
+    </section>
+
+    <section id="text" class="">
+      <Text />
     </section>
 
     <!-- PROJECT -->
