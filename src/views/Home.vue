@@ -4,7 +4,6 @@ import Contacts from '@/components/Contacts.vue'
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import ProjectsPre from '@/components/ProjectsPre.vue'
-import Service from '@/components/Service.vue'
 import Skills from '@/components/Skills.vue'
 import Text from '@/components/Text.vue'
 </script>
@@ -34,10 +33,6 @@ import Text from '@/components/Text.vue'
     <!-- CONTACT -->
     <section id="skills" class="">
       <Skills />
-    </section>
-
-    <section id="skills" class="">
-      <Service />
     </section>
 
     <section id="contact" class="">

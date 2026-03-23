@@ -1,6 +1,7 @@
 <template>
-  <section class="grid gap-12 md:grid-cols-2 items-center text-white px-6 py-20 max-w-7xl mx-auto">
-    <!-- LEFT -->
+  <section
+    class="grid gap-12 md:grid-cols-2 items-center text-white px-6 pt-20 pb-8 max-w-7xl mx-auto"
+  >
     <div class="space-y-6 max-w-lg">
       <h1 class="text-3xl md:text-4xl font-changaOne uppercase tracking-wide leading-tight">
         About Me
@@ -11,7 +12,6 @@
         enjoy turning ideas into interactive and functional digital products.
       </p>
 
-      <!-- divider -->
       <div class="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-transparent"></div>
 
       <ul class="space-y-3 text-sm md:text-base text-white/80">
@@ -28,16 +28,35 @@
           Delivering solutions based on client needs
         </li>
       </ul>
+
+      <div class="flex justify-center md:justify-start pt-4">
+        <svg class="w-16 h-16 text-purple-400 animate-fadeIn" viewBox="0 0 100 100" fill="none">
+          <path
+            d="M20 20 C20 60, 80 40, 80 80"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            class="animate-draw"
+          />
+
+          <polyline
+            points="70,75 80,85 90,75"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="animate-bounceArrow"
+          />
+        </svg>
+      </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="relative grid gap-6">
-      <!-- CARD 1 -->
       <div class="relative group rounded-2xl">
         <div
           class="absolute -inset-[1px] rounded-2xl bg-[linear-gradient(120deg,#a855f7,#6366f1,#a855f7)] bg-[length:200%_100%] animate-gradient opacity-80 blur-md group-hover:opacity-100 transition duration-300"
         ></div>
-
         <div class="relative bg-black/60 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
           <h2 class="text-lg md:text-xl font-changaOne uppercase mb-2">Web Development</h2>
           <p class="text-sm text-white/70 leading-relaxed">
@@ -47,12 +66,10 @@
         </div>
       </div>
 
-      <!-- CARD 2 -->
       <div class="relative group rounded-2xl">
         <div
           class="absolute -inset-[1px] rounded-2xl bg-[linear-gradient(120deg,#a855f7,#6366f1,#a855f7)] bg-[length:200%_100%] animate-gradient opacity-80 blur-md group-hover:opacity-100 transition duration-300"
         ></div>
-
         <div class="relative bg-black/60 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
           <h2 class="text-lg md:text-xl font-changaOne uppercase">UI / UX Design</h2>
           <p class="text-sm text-white/70 leading-relaxed">
@@ -62,12 +79,10 @@
         </div>
       </div>
 
-      <!-- CARD 3 -->
       <div class="relative group rounded-2xl">
         <div
           class="absolute -inset-[1px] rounded-2xl bg-[linear-gradient(120deg,#a855f7,#6366f1,#a855f7)] bg-[length:200%_100%] animate-gradient opacity-80 blur-md group-hover:opacity-100 transition duration-300"
         ></div>
-
         <div class="relative bg-black/60 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
           <h2 class="text-lg md:text-xl font-changaOne uppercase">Data & System Management</h2>
           <p class="text-sm text-white/70 leading-relaxed">
@@ -76,31 +91,6 @@
           </p>
         </div>
       </div>
-    </div>
-
-    <!-- CURVED ARROW -->
-    <div class="flex justify-center md:justify-start">
-      <svg class="w-20 h-20 text-purple-400 animate-fadeIn" viewBox="0 0 100 100" fill="none">
-        <!-- path melengkung -->
-        <path
-          d="M20 20 C20 60, 80 40, 80 80"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          class="animate-draw"
-        />
-
-        <!-- arrow head -->
-        <polyline
-          points="70,75 80,85 90,75"
-          stroke="currentColor"
-          stroke-width="2"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="animate-bounceArrow"
-        />
-      </svg>
     </div>
   </section>
 </template>

@@ -4,7 +4,7 @@
     class="min-h-screen flex items-center justify-center bg-black max-w-7xl mx-auto"
   >
     <h1
-      class="font-dmSans text-4xl md:text-6xl text-center flex flex-wrap justify-center gap-x-4 gap-y-2"
+      class="font-dmSans text-2xl px-4 md:text-4xl lg:text-6xl text-center flex flex-wrap justify-center gap-x-4 gap-y-2"
     >
       <span
         v-for="(word, index) in words"
