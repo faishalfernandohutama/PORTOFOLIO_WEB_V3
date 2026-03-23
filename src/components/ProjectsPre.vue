@@ -3,164 +3,305 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-  <section class="grid gap-16 text-white px-6 max-w-7xl mx-auto">
-    <!-- TITLE -->
-    <div class="text-center">
-      <h1 class="text-3xl font-changaOne md:text-4xl lg:text-6xl">EVERYTHING ABOUT MY PROJECT</h1>
+  <section class="grid gap-20 text-white px-6 py-12 max-w-7xl mx-auto">
+    <div class="text-center space-y-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-changaOne uppercase tracking-wider">
+        Selected Projects
+      </h1>
+      <p class="text-white/50 font-dmSans max-w-2xl mx-auto text-sm md:text-base">
+        A collection of web applications and digital solutions I've built, focusing on efficiency,
+        clean architecture, and seamless user experience.
+      </p>
     </div>
 
-    <!-- CARD LIST -->
-    <div class="grid gap-12">
-      <!-- ================= CARD 1 ================= -->
-      <div class="card-clean grid md:grid-cols-2 gap-10 items-center p-8 rounded-2xl">
-        <div class="flex flex-col justify-between h-full">
+    <div class="grid gap-16 md:gap-24 mt-8">
+      <div class="group relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="flex flex-col justify-center order-2 md:order-1 space-y-6">
           <div class="space-y-4">
-            <h2 class="uppercase text-2xl font-semibold">Clipper Crafters</h2>
-            <p class="text-gray-400 font-dmSans">
-              Web-based system for UMKM to manage bookings and customer interaction.
+            <h2
+              class="uppercase text-3xl font-changaOne tracking-wide group-hover:text-purple-400 transition-colors duration-300"
+            >
+              Clipper Crafters
+            </h2>
+            <p class="text-white/60 font-dmSans leading-relaxed text-sm md:text-base">
+              Web-based system for UMKM to manage bookings and customer interaction efficiently.
+              Designed to streamline daily operations for local businesses.
             </p>
           </div>
 
-          <div class="flex justify-between mt-6">
+          <div
+            class="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-white/10"
+          >
             <ul class="flex gap-3">
-              <li class="icon-box"><Icon icon="vscode-icons:file-type-html" /></li>
-              <li class="icon-box"><Icon icon="vscode-icons:file-type-css" /></li>
-              <li class="icon-box"><Icon icon="logos:javascript" /></li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="vscode-icons:file-type-html" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="vscode-icons:file-type-css" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:javascript" class="w-5 h-5" />
+              </li>
             </ul>
-            <button class="btn-clean">Github</button>
+            <a
+              href="#"
+              class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
+            </a>
           </div>
         </div>
-
-        <div class="image-box">
-          <img src="./icons/clip.png" />
+        <div
+          class="relative overflow-hidden rounded-2xl aspect-video bg-white/5 border border-white/10 order-1 md:order-2"
+        >
+          <img
+            src="./icons/clip.png"
+            alt="Clipper Crafters"
+            class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+          />
         </div>
       </div>
 
-      <!-- ================= CARD 2 ================= -->
-      <div class="card-clean grid md:grid-cols-2 gap-10 items-center p-8 rounded-2xl">
-        <div class="image-box order-1 md:order-none">
-          <img src="./icons/ERP.png" />
+      <div class="group relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div
+          class="relative overflow-hidden rounded-2xl aspect-video bg-white/5 border border-white/10 order-1 md:order-1"
+        >
+          <img
+            src="./icons/ERP.png"
+            alt="ERP Project"
+            class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+          />
         </div>
-
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-center order-2 md:order-2 space-y-6">
           <div class="space-y-4">
-            <h2 class="uppercase text-2xl font-semibold">ERP Project</h2>
-            <p class="text-gray-400 font-dmSans">
-              Machine Learning Web Implementation: Plantation Production Predictor A React-based web
-              application that functions as a plantation production prediction dashboard. This
-              project covers an end-to-end workflow, from data preprocessing using the CatBoost
-              algorithm to presenting results through a responsive user interface. The project's
-              primary focus is predictive model optimization and user experience (UX) for monitoring
-              agricultural production trends.
+            <h2
+              class="uppercase text-3xl font-changaOne tracking-wide group-hover:text-purple-400 transition-colors duration-300"
+            >
+              ERP Project
+            </h2>
+            <p class="text-white/60 font-dmSans leading-relaxed text-sm md:text-base">
+              Full-Stack Enterprise Resource Planning (ERP) System designed to manage, automate, and
+              integrate business operations. Built with a decoupled architecture featuring a
+              responsive dashboard and a secure RESTful API backend handling complex business logic.
             </p>
           </div>
 
-          <div class="flex justify-between mt-6">
+          <div
+            class="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-white/10"
+          >
             <ul class="flex gap-3">
-              <li class="icon-box"><Icon icon="simple-icons:express" /></li>
-              <li class="icon-box"><Icon icon="logos:react" /></li>
-              <li class="icon-box"><Icon icon="logos:tailwindcss-icon" /></li>
-              <li class="icon-box"><Icon icon="logos:nodejs-icon" /></li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="simple-icons:express" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:react" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:tailwindcss-icon" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:nodejs-icon" class="w-5 h-5" />
+              </li>
             </ul>
-            <button class="btn-clean">Github</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ================= CARD 3 ================= -->
-      <div class="card-clean grid md:grid-cols-2 gap-10 items-center p-8 rounded-2xl">
-        <div class="flex flex-col justify-between h-full">
-          <div class="space-y-4">
-            <h2 class="uppercase text-2xl font-semibold">CatBoost Prediction</h2>
-            <p class="text-gray-400 font-dmSans">
-              Full-Stack Enterprise Resource Planning (ERP) System: A web-based ERP system designed
-              to manage, automate, and integrate various business operational processes. This
-              project is built with a decoupled architecture: The frontend repository focuses on a
-              responsive and interactive dashboard interface, while the backend repository handles
-              complex business logic, database management, and provides a secure RESTful API.
-            </p>
-          </div>
-
-          <div class="flex justify-between mt-6">
-            <ul class="flex gap-3">
-              <li class="icon-box"><Icon icon="logos:python" /></li>
-              <li class="icon-box"><Icon icon="logos:react" /></li>
-              <li class="icon-box"><Icon icon="logos:tailwindcss-icon" /></li>
-            </ul>
-            <button class="btn-clean">Github</button>
-          </div>
-        </div>
-
-        <div class="image-box">
-          <img src="./icons/cat.png" />
-        </div>
-      </div>
-
-      <!-- ================= CARD 4 ================= -->
-      <div class="card-clean grid md:grid-cols-2 gap-10 items-center p-8 rounded-2xl">
-        <div class="image-box order-1 md:order-none">
-          <img src="./icons/InnHubb.png" />
-        </div>
-
-        <div class="flex flex-col justify-between h-full">
-          <div class="space-y-4">
-            <h2 class="uppercase text-2xl font-semibold">InnHub</h2>
-            <p class="text-gray-400 font-dmSans">
-              InnHub: Integrated Hospitality & Property Management System InnHub is a modern lodging
-              management platform designed to simplify the reservation process and property
-              operations. Built on a full-stack architecture that separates the client and server
-              sides, the application enables real-time management of room data, guest reservations,
-              and transaction reporting. This project highlighted my ability to integrate a dynamic
-              user interface with secure and scalable API services.
-            </p>
-          </div>
-
-          <div class="flex justify-between mt-6">
-            <ul class="flex gap-3">
-              <li class="icon-box"><Icon icon="simple-icons:express" /></li>
-              <li class="icon-box"><Icon icon="logos:react" /></li>
-              <li class="icon-box"><Icon icon="logos:tailwindcss-icon" /></li>
-              <li class="icon-box"><Icon icon="logos:nodejs-icon" /></li>
-            </ul>
-            <button class="btn-clean">Github</button>
+            <a
+              href="#"
+              class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- ================= CARD 5 ================= -->
-      <div class="card-clean grid md:grid-cols-2 gap-10 items-center p-8 rounded-2xl">
-        <div class="flex flex-col justify-between h-full">
+      <div class="group relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="flex flex-col justify-center order-2 md:order-1 space-y-6">
           <div class="space-y-4">
-            <h2 class="uppercase text-2xl font-semibold">CukurRans</h2>
-            <p class="text-gray-400 font-dmSans">
-              Cukurans: Digital Barbershop Booking & Management System Cukurans is a digital
-              solution designed to modernize conventional barbershop services. This platform allows
-              users to book appointments online while also helping barbershop owners manage queues
-              and barber schedules efficiently. With a decoupled architecture, the system ensures
-              fast performance on the user side and secure data management on the server side.
+            <h2
+              class="uppercase text-3xl font-changaOne tracking-wide group-hover:text-purple-400 transition-colors duration-300"
+            >
+              CatBoost Prediction
+            </h2>
+            <p class="text-white/60 font-dmSans leading-relaxed text-sm md:text-base">
+              Machine Learning Web Implementation for Plantation Production Prediction. A
+              React-based dashboard covering an end-to-end workflow—from data preprocessing using
+              the CatBoost algorithm to presenting optimized predictive models through a clean UI.
             </p>
           </div>
 
-          <div class="flex justify-between mt-6">
+          <div
+            class="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-white/10"
+          >
             <ul class="flex gap-3">
-              <li class="icon-box"><Icon icon="simple-icons:express" /></li>
-              <li class="icon-box"><Icon icon="logos:react" /></li>
-              <li class="icon-box"><Icon icon="logos:tailwindcss-icon" /></li>
-              <li class="icon-box"><Icon icon="logos:nodejs-icon" /></li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:python" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:react" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:tailwindcss-icon" class="w-5 h-5" />
+              </li>
             </ul>
-            <button class="btn-clean">Github</button>
+            <a
+              href="#"
+              class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
+            </a>
           </div>
         </div>
+        <div
+          class="relative overflow-hidden rounded-2xl aspect-video bg-white/5 border border-white/10 order-1 md:order-2"
+        >
+          <img
+            src="./icons/cat.png"
+            alt="CatBoost Prediction"
+            class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+          />
+        </div>
+      </div>
 
-        <div class="image-box">
-          <img src="./icons/Cukur.png" />
+      <div class="group relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div
+          class="relative overflow-hidden rounded-2xl aspect-video bg-white/5 border border-white/10 order-1 md:order-1"
+        >
+          <img
+            src="./icons/InnHubb.png"
+            alt="InnHub"
+            class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+          />
+        </div>
+        <div class="flex flex-col justify-center order-2 md:order-2 space-y-6">
+          <div class="space-y-4">
+            <h2
+              class="uppercase text-3xl font-changaOne tracking-wide group-hover:text-purple-400 transition-colors duration-300"
+            >
+              InnHub
+            </h2>
+            <p class="text-white/60 font-dmSans leading-relaxed text-sm md:text-base">
+              Integrated Hospitality & Property Management System. A modern platform designed to
+              simplify reservations and property operations, featuring real-time room data
+              management and scalable API services.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-white/10"
+          >
+            <ul class="flex gap-3">
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="simple-icons:express" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:react" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:tailwindcss-icon" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:nodejs-icon" class="w-5 h-5" />
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="flex flex-col justify-center order-2 md:order-1 space-y-6">
+          <div class="space-y-4">
+            <h2
+              class="uppercase text-3xl font-changaOne tracking-wide group-hover:text-purple-400 transition-colors duration-300"
+            >
+              CukurRans
+            </h2>
+            <p class="text-white/60 font-dmSans leading-relaxed text-sm md:text-base">
+              Digital Barbershop Booking & Management System. Modernizing conventional services by
+              allowing online appointments and efficient queue management. Built with a decoupled
+              architecture for fast user-side performance.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-wrap items-center justify-between gap-6 pt-4 border-t border-white/10"
+          >
+            <ul class="flex gap-3">
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="simple-icons:express" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:react" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:tailwindcss-icon" class="w-5 h-5" />
+              </li>
+              <li
+                class="p-2.5 bg-white/5 rounded-lg border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all"
+              >
+                <Icon icon="logos:nodejs-icon" class="w-5 h-5" />
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-2xl aspect-video bg-white/5 border border-white/10 order-1 md:order-2"
+        >
+          <img
+            src="./icons/Cukur.png"
+            alt="CukurRans"
+            class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
+          />
         </div>
       </div>
     </div>
-    <!-- CURVED ARROW -->
-    <div class="mt-8 flex justify-center md:justify-end left-0">
+
+    <div class="mt-20 flex justify-center md:justify-end">
       <svg class="w-20 h-20 text-purple-400 animate-fadeIn" viewBox="0 0 100 100" fill="none">
-        <!-- path melengkung -->
         <path
           d="M20 20 C20 60, 80 40, 80 80"
           stroke="currentColor"
@@ -168,8 +309,6 @@ import { Icon } from '@iconify/vue'
           stroke-linecap="round"
           class="animate-draw"
         />
-
-        <!-- arrow head -->
         <polyline
           points="70,75 80,85 90,75"
           stroke="currentColor"
@@ -185,97 +324,46 @@ import { Icon } from '@iconify/vue'
 </template>
 
 <style>
-.card-clean {
-  position: relative;
-  background: rgba(24, 24, 27, 0.85);
-  backdrop-filter: blur(12px);
-  border-radius: 1rem;
-  overflow: hidden;
+/* Animasi Panah (Tetap dipertahankan dari kode Anda sebelumnya) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
 }
 
-/* BORDER */
-.card-clean::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: inherit;
-
-  background: linear-gradient(
-    120deg,
-    rgba(0, 255, 255, 0.25),
-    rgba(139, 92, 246, 0.25),
-    rgba(236, 72, 153, 0.25)
-  );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+@keyframes draw {
+  from {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.animate-draw {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw 1.5s ease forwards;
 }
 
-/* GLOW */
-.card-clean::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-
-  background: linear-gradient(
-    120deg,
-    rgba(0, 255, 255, 0.1),
-    rgba(139, 92, 246, 0.1),
-    rgba(236, 72, 153, 0.1)
-  );
-
-  filter: blur(10px);
-  opacity: 0.4;
-  z-index: -1;
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
-
-/* IMAGE */
-.image-box {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 0.75rem;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.image-box img:hover {
-  transform: scale(1.05);
-}
-
-/* ICON */
-.icon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: #27272a;
-  border-radius: 6px;
-  font-size: 18px;
-}
-
-/* BUTTON */
-.btn-clean {
-  background: white;
-  color: black;
-  font-size: 12px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  transition: 0.2s;
-}
-
-.btn-clean:hover {
-  opacity: 0.8;
+.animate-bounceArrow {
+  animation: bounceArrow 1.5s infinite ease-in-out;
 }
 </style>
