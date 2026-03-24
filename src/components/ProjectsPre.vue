@@ -50,7 +50,7 @@ import { Icon } from '@iconify/vue'
               </li>
             </ul>
             <a
-              href="#"
+              href="https://github.com/faishalfernandohutama/MbkmSkilvul"
               class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
@@ -118,7 +118,7 @@ import { Icon } from '@iconify/vue'
               </li>
             </ul>
             <a
-              href="#"
+              href="https://github.com/ERPUas"
               class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
@@ -163,7 +163,7 @@ import { Icon } from '@iconify/vue'
               </li>
             </ul>
             <a
-              href="#"
+              href="https://github.com/faishalfernandohutama/Prediksi_Produksi"
               class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
@@ -231,7 +231,7 @@ import { Icon } from '@iconify/vue'
               </li>
             </ul>
             <a
-              href="#"
+              href="https://github.com/orgs/FullStack-7/repositories"
               class="px-6 py-2.5 text-sm font-dmSans font-medium bg-white text-black rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               View Github <Icon icon="mdi:arrow-top-right" class="w-4 h-4" />
